@@ -61,5 +61,5 @@ def write():
         st.success(result)
         ast.shared.components.video_youtube(src=link)
 
-    st.write("사이드바를 열어 다양한 기능을 사용하실 수 있습니다.")
-    st.write("PC 버전으로 이동 https://share.streamlit.io/soloy8/ai_diary/main.py")
+    st.write("사이드바를 열어 다양한 기능을 사용하실 수 있습니다. PC 버전으로 이동.")
+    st.write("https://share.streamlit.io/soloy8/ai_diary/main.py")
