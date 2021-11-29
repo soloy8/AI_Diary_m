@@ -8,40 +8,25 @@ from awesome_streamlit.core.services import resources
 
 def write():
 
-    st.title('호환성 문제 알림.')
+    st.title('남은 제작 진행 사항.')
 
     st.write(
     """
-    streamlit기반의 파일조차 사소한 오류로 구동 자체가 안되는 경우가 대부분입니다. 때문에 꼭 호환성을 확인해 주셔야 합니다. 제작하실 경우 github에서 branch를 따서 git desk를 통해 push 후 merge하시면 됩니다. 
-    접속을 위한 ID PW는 카카오톡 공지사항에 업로드 하였습니다. 호환성 문제로 작업이 많이 급해진점 알려드리게 되어 난처함을 감출 수 없습니다. 항상 노력해주셔서 감사합니다.\n
-    \n
+        8조의 노력과 헌신으로 많은 부분들이 해결되었습니다. \n
     """)
-
-    st.title('시급한 현안')
 
     st.write(
         """
-    1. kobert_hf에 사용되는 모델중 미작동 모델 호환시키기(웹상에서는 import가 아닌 requirement 파일을 통해 구현되게 됩니다.)\n
+    1. 캘린더 및 데이터 저장기능 제작하기\n
+    2. 로그인기능 제작하기(이지훈님께서 제작해주고 계십니다)\n
+    3. 도표 작성\n
+    4. AI 뮤직 꾸미기\n
+    5. AI푸드 꾸미기?\n
     
-    ###하단 미작동 확인.\n
-    mxnet==1.6.0 error2 deep learning module... #1.8 1.7 1.6 1.9 2.0 전부 미작동.\n
-    gluonnlp==0.10.0 error3\n
-    
-    ###하단 작동 확인0.\n
-    sentencepiece==0.1.91\n
-    transformers==4.8.2\n
-    torch==1.10.0\n
-    
-    ###오락가락...\n
-    kobert-tokenizer==0.1\n
-`
- \n
-    2. Kobery_hf모델 local에서 작동시키기 \n
-    3. 노래 추천 코드 웹앱과 호환시키기\n
-    4. 캘린더 및 데이터 저장기능 제작하기\n
-    5. 로그인기능 제작하기\n
-    (3, 4번 쿼리로 서버 데이터 저장해야 할 수도 있습니다) \n
-    
+    발표 진행
+    1. 1차 PPT 김소원님께서 제작 진행해주고 계십니다. (12/7예정)\n
+    2. 발표자 선정.\n
+ 
     
     \n
     \n
