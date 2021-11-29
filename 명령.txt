@@ -1,0 +1,13 @@
+cd desktop 
+cd ED_up
+cd ED
+
+streamlit run streamlit_app.py
+
+heroku login
+https://emoary.herokuapp.com
+https://git.heroku.com/emoary.git
+
+pip3 install streamlit (파이썬 재설치시....) pip install streamlit아님... ㅠㅠ
+pip install awesome-streamlit (ㅋㅋㅋㅋㅋ 다시 설치중 골떄리는 문제네)
+
