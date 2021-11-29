@@ -17,7 +17,7 @@ def write():
 #    img = st.markdown("!(https://ibb.co/VV3SgK1.png)")
     # Image.open("files/example_cat.jpg")  # 원래 jpeg, jpg가능 확인.
 #    st.image(img, width=700, caption="Image example: Diary")  # 400잡으면 전체 400축소됨.
-    st.image('https://i.ibb.co/BLwZy1p/example-cat.png', width=275, caption="일기를 작성하시면 AI가 감정에 맞는 노래를 선곡해 드립니다!") # 400잡으면 전체 400축소됨.
+    st.image('https://i.ibb.co/BLwZy1p/example-cat.png', width=275, caption="AI가 일기에 맞는 노래를 선곡해 드립니다!") # 400잡으면 전체 400축소됨.
 
 # 사진에 병합.
 #    st.title('끄적이는 일기 속에서')
