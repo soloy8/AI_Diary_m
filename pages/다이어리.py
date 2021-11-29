@@ -17,7 +17,7 @@ def write():
 #    img = st.markdown("!(https://ibb.co/VV3SgK1.png)")
     # Image.open("files/example_cat.jpg")  # 원래 jpeg, jpg가능 확인.
 #    st.image(img, width=700, caption="Image example: Diary")  # 400잡으면 전체 400축소됨.
-    st.image('https://i.ibb.co/BLwZy1p/example-cat.png', width=270, caption="Image example: Diary") # 400잡으면 전체 400축소됨.
+    st.image('https://i.ibb.co/BLwZy1p/example-cat.png', width=275, caption="Image example: Diary") # 400잡으면 전체 400축소됨.
 
 # 사진에 병합.
 #    st.title('끄적이는 일기 속에서')
@@ -61,4 +61,5 @@ def write():
         st.success(result)
         ast.shared.components.video_youtube(src=link)
 
+    st.write("사이드바를 열어 다양한 기능을 사용하실 수 있습니다.")
     st.write("PC 버전으로 이동 https://share.streamlit.io/soloy8/ai_diary/main.py")
