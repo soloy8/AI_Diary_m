@@ -17,7 +17,7 @@ def write():
 #    img = st.markdown("!(https://ibb.co/VV3SgK1.png)")
     # Image.open("files/example_cat.jpg")  # 원래 jpeg, jpg가능 확인.
 #    st.image(img, width=700, caption="Image example: Diary")  # 400잡으면 전체 400축소됨.
-    st.image('https://i.ibb.co/BLwZy1p/example-cat.png', width=300, caption="Image example: Diary") # 400잡으면 전체 400축소됨.
+    st.image('https://i.ibb.co/BLwZy1p/example-cat.png', width=250, caption="Image example: Diary") # 400잡으면 전체 400축소됨.
 
 # 사진에 병합.
 #    st.title('끄적이는 일기 속에서')
@@ -41,8 +41,8 @@ def write():
     col1, col2, col3 = st.columns(3)
     # 기존 날씨 파트
     col1.metric("Temperature", "70 °F", "1.2 °F")
-    col1.metric("Wind", "9 mph", "-8%")
-    col1.metric("Humidity", "86%", "4%")
+    col2.metric("Wind", "9 mph", "-8%")
+    #col1.metric("Humidity", "86%", "4%")
 
     # 실시간 날씨 파트
 
