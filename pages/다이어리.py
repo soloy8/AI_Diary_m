@@ -63,3 +63,4 @@ def write():
 
     st.write("좌측 상단 > 를 눌러 다양한 기능을 사용하실 수 있습니다... 아래를 눌러 PC버전 이동...")
     st.write("https://share.streamlit.io/soloy8/ai_diary/main.py")
+    st.write("개인정보를 일체 수집하지 않으며 데이터 저장 기능이 없습니다.")

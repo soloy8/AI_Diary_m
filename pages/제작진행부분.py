@@ -22,6 +22,9 @@ def write():
     3. 도표 작성\n
     4. AI 뮤직 꾸미기\n
     5. AI푸드 꾸미기?\n
+    6. 리소스 제한에 도달\n
+    https://discuss.streamlit.io/t/this-app-has-gone-over-its-resource-limits/7334\n
+    TTL을 사용하라고..? 하네요..???\n
     
     발표 진행
     1. 1차 PPT 김소원님께서 제작 진행해주고 계십니다. (12/7예정)\n
