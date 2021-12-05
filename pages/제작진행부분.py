@@ -26,10 +26,14 @@ def write():
     https://discuss.streamlit.io/t/this-app-has-gone-over-its-resource-limits/7334\n
     TTL을 사용하라고..? 하네요..???\n
     
-    발표 진행
+    발표 진행\n
     1. 1차 PPT 김소원님께서 제작 진행해주고 계십니다. (12/7예정)\n
     2. 발표자 선정.\n
  
+    모바일 버전과 PC버전 분리.\n
+    
+    1. 모바일 버전 특이사항. 사이트바 사용이 불편하여 위 아래 스크롤로 전부 통합할 계획입니다. \n 
+    2, PC버전 특이사항. \n
     
     \n
     \n

@@ -10,7 +10,8 @@ from datetime import datetime, date, time
 def write():
     """Method used to write the page in the app.py file"""
 
-    st.title('data 저장 개발중')
+    st.title('MERRY CHRISTMAS')
+    st.image('https://i.pinimg.com/564x/66/5b/aa/665baa36313fcede47101848c22faa8f.jpg', width=275)
 
 
 #st.date_input('start date')

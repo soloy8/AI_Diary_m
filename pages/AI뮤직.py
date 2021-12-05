@@ -1,41 +1,54 @@
-"""This page is for searching and viewing the list of awesome resources"""
-import logging
+"""Home page shown when the user enters the application"""
 import streamlit as st
-
 import awesome_streamlit as ast
-from awesome_streamlit.core.services import resources
-
-#차트용 pandas, numpy import
-import pandas as pd
 import numpy as np
+from webpage.web_predict import *
 
 
+
+
+
+#하단은 이전 제작파 코드 
+# pylint: disable=line-too-long
 def write():
-    #위 구문 안쓰면 오류임
-    st.write("유튜브 링크를 통해 동영상을 재생할 경우 다운로드 및 확장자 수정이 필요없어 간편합니다.")
-    st.write("감정분류 리스트 내에서 랜덤함수로 노래 한곡 뽑아도 무방할 것으로 추정됨")
-    st.write("""유튜브 원 주소중 watch?v= 뒤의 주소만 embed/ 뒤에 넣어야 웹 페이지에서 정상적으로 작동합니다.  \n 재생용 소스코드 ast.shared.components.video_youtube(src="https://www.youtube.com/embed/fYdoCdmoNAU" # \n youtube 원 주소 https://www.youtube.com/watch?v=fYdoCdmoNAU 
-    )""")
 
-    ast.shared.components.video_youtube(
-        src="https://www.youtube.com/embed/fYdoCdmoNAU" # youtube 주소 중 watch?v= 뒤의 주소만 embed/ 뒤에 넣어야 정상적 작동.
-    )
+    ##Show image 이거 주석이고 문법 아님.
+    from PIL import Image
+#    img = st.markdown("!(https://ibb.co/VV3SgK1.png)")
+    # Image.open("files/example_cat.jpg")  # 원래 jpeg, jpg가능 확인.
+#    st.image(img, width=700, caption="Image example: Diary")  # 400잡으면 전체 400축소됨.
+    st.image('https://i.ibb.co/BLwZy1p/example-cat.png', width=275, caption="Image example: Diary") # 400잡으면 전체 400축소됨.
 
+# 사진에 병합.
+#    st.title('끄적이는 일기 속에서')
+#    st.title('네 노래가 느껴진거야♬')
+#    st.write("일기를 작성하시면 AI가 일기 속의 숨겨진 노래를 찾아내 감정을 채워드립니다.")
 
-    ## Show videos 저작권 문제로 유튜브 링크로 변경.
-    #vid_file = open("files/BTS (방탄소년단) 'ON' Official MV.mp4", "rb").read()
-    #st.video(vid_file, start_time=2)
+    import time
+    import datetime
+    from datetime import datetime, date, time
 
-    ## Play audio file.
-    #audio_file = open("files/loop_w_bass.mp3", "rb").read()
-    #st.audio(audio_file, format='audio/mp3', start_time=10)
-
-
-
+    st.date_input('날짜 선택')
+    # the_time = st.time_input("시간을 입력하세요.", datetime.time()) error?
 
 
 
+    # 실시간 날씨 파트
 
+    # 텍스트 한줄 쓰는 부분.
+    # sentence = st.text_input('여기에 일기를 입력하세요!')
+    # 텍스트 여러줄 쓰는 부분.
+    
 
-if __name__ == "__main__":
-    write()
+    input_data = st.text_area("오늘의 일기를 작성하세요!")
+
+    # 여기서 input_data를 감정분석 프로그램에 넘겨주고 그 인수를 받아와야 한다. - 해결!
+
+    Push_listen_button = st.button("일기 작성")
+    if Push_listen_button:
+        result,link = predict(input_data)
+        st.success(result)
+        ast.shared.components.video_youtube(src=link)
+
+    st.write("모바일 버전으로 이동 https://share.streamlit.io/soloy8/dj_diary/main.py")
+    st.write("개인정보를 일체 수집하지 않으며 데이터 저장 기능이 없습니다.")
