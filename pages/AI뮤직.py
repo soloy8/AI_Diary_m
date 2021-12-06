@@ -50,5 +50,5 @@ def write():
         st.success(result)
         ast.shared.components.video_youtube(src=link)
 
-    st.write("모바일 버전으로 이동 https://share.streamlit.io/soloy8/dj_diary/main.py")
+    st.write("PC 버전으로 이동 https://share.streamlit.io/soloy8/ai_diary/main.py")
     st.write("개인정보를 일체 수집하지 않으며 데이터 저장 기능이 없습니다.")
