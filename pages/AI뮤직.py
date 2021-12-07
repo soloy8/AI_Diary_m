@@ -49,6 +49,7 @@ def write():
         result,link = predict(input_data)
         st.success(result)
         ast.shared.components.video_youtube(src=link)
-
+        st.write("전체화면으로 이동", link)
+        
     st.write("PC 버전으로 이동 https://share.streamlit.io/soloy8/ai_diary/main.py")
     st.write("개인정보를 일체 수집하지 않으며 데이터 저장 기능이 없습니다.")
