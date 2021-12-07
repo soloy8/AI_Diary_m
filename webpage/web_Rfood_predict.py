@@ -1,9 +1,9 @@
 from webpage.web_module import *
-from webpage.web_food_data import *
+from webpage.web_Rfood_data import *
 
 
 # 예측 함수
-def predict(predict_sentence):
+def Rpredict(predict_sentence):
     data = [predict_sentence, '0']
     dataset_another = [data]
 
@@ -64,12 +64,12 @@ def predict(predict_sentence):
                 music_eval.append(final_music6.sample(1))
 
         # 가수-노래 추천
-        result_music = ">> AI가 추천하는 맞춤 음식 " + "[" + music_eval[0].iloc[0].at['제목'] + "-" + music_eval[0].iloc[0].at[
-            '가수'] + "]" + " 입니다.\n\n\n\n\n\n"
+        result_music = ">> 입이 즐거운 랜덤추천 음식은 " + "[" + music_eval[0].iloc[0].at['제목'] + music_eval[0].iloc[0].at['가수'] + "]" + " 입니다.\n\n\n\n\n\n"
         # 가수-노래-링크 추천
         # link = ">> 들으러가기 " + "[" + music_eval[0].iloc[0].at['Youtube'] + "]"
 
         link = music_eval[0].iloc[0].at['Youtube']
-        result = result_emotion + result_music
-
+        #result = result_emotion + result_music
+        result = result_music
+        
         return result, link
