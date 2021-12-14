@@ -14,8 +14,12 @@ logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
 
 def write():
     #위 구문 안쓰면 오류임
-    st.title('AI감성 분석 그래프')
-    st.header('👀지난 일기의 감정을 한눈에 살펴보세요')    
+    st.write("""
+    ### AI감성 분석 그래프 \n
+    #### 👀지난 일기의 감정을 한눈에 살펴보세요
+    """)
+#    st.title('AI감성 분석 그래프')
+#    st.header('👀지난 일기의 감정을 한눈에 살펴보세요')
     #차트 들여쓰기 안하니까 오류난다.
     
 # 데이터 불러오기

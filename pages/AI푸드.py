@@ -9,8 +9,9 @@ import pandas as pd
 def write():
     #위 구문 안쓰면 오류임
 
-    st.title('식사 맛있게 하시고')
-    st.title('따뜻한 시간 보내세요~''')
+    st.write("""
+    ### 감정을 채워주는 AI FOOD DIARY 
+    """)
     input_data = st.text_area("식사 전의 기분을 입력하세요!")
 
     # 여기서 input_data를 감정분석 프로그램에 넘겨주고 그 인수를 받아와야 한다. - 해결!
@@ -32,14 +33,10 @@ def write():
     st.image('https://cdn.pixabay.com/photo/2018/04/20/18/13/tablecloth-3336687__340.jpg', width=275)
 
 
-    st.write(
-    """
-    
-    """
 
-
-
-    )
+    st.write("""
+    #### 식사 맛있게 하시고 따뜻한 시간 보내세요 ~ 
+    """)
 
 
 if __name__ == "__main__":

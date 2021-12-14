@@ -13,11 +13,11 @@ from webpage.web_predict import *
 def write():
 
     ##Show image 이거 주석이고 문법 아님.
-    from PIL import Image
+##임시중단.    from PIL import Image
 #    img = st.markdown("!(https://ibb.co/VV3SgK1.png)")
     # Image.open("files/example_cat.jpg")  # 원래 jpeg, jpg가능 확인.
 #    st.image(img, width=700, caption="Image example: Diary")  # 400잡으면 전체 400축소됨.
-    st.image('https://i.ibb.co/BLwZy1p/example-cat.png', width=275, caption="Image example: Diary") # 400잡으면 전체 400축소됨.
+##    st.image('https://i.ibb.co/BLwZy1p/example-cat.png', width=700, caption="Image example: Diary") # 400잡으면 전체 400축소됨.
 
 # 사진에 병합.
 #    st.title('끄적이는 일기 속에서')
@@ -28,19 +28,18 @@ def write():
     import datetime
     from datetime import datetime, date, time
 
+    st.write("""
+    ### 감정을 채워주는 AI MUSIC DIARY 
+    """)
+
     st.date_input('날짜 선택')
     # the_time = st.time_input("시간을 입력하세요.", datetime.time()) error?
 
 
 
-    # 실시간 날씨 파트
-
-    # 텍스트 한줄 쓰는 부분.
-    # sentence = st.text_input('여기에 일기를 입력하세요!')
-    # 텍스트 여러줄 쓰는 부분.
     
 
-    input_data = st.text_area("오늘의 일기를 작성하세요!")
+    input_data = st.text_area("오늘의 일기를 작성하시면 AI가 일기 속의 숨겨진 노래를 찾아내 감정을 채워드립니다.")
 
     # 여기서 input_data를 감정분석 프로그램에 넘겨주고 그 인수를 받아와야 한다. - 해결!
 
@@ -50,6 +49,6 @@ def write():
         st.success(result)
         ast.shared.components.video_youtube(src=link)
         st.write("전체화면으로 이동", link)
-        
-    st.write("PC 버전으로 이동 https://share.streamlit.io/soloy8/ai_diary/main.py")
-    st.write("개인정보를 일체 수집하지 않으며 익명 작성시 데이터를 저장하지 않습니다.")
+
+    st.write("모바일 버전으로 이동 https://share.streamlit.io/soloy8/ai_diary_m/main.py")
+    st.write("개인정보를 일체 수집하지 않으며, 익명 작성시 데이터를 저장하지 않습니다.")

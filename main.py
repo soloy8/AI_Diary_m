@@ -23,14 +23,19 @@ import awesome_streamlit as ast
 import pages.AI감정분석
 import pages.AI뮤직
 import pages.AI푸드
-import pages.AI여행
+#import pages.AI여행
 import pages.달력
 import pages.제작진행부분
 
 
 
 
-#test part
+#상단베너
+from PIL import Image
+#    img = st.markdown("!(https://ibb.co/VV3SgK1.png)")
+    # Image.open("files/example_cat.jpg")  # 원래 jpeg, jpg가능 확인.
+#    st.image(img, width=700, caption="Image example: Diary")  # 400잡으면 전체 400축소됨.
+st.image('https://i.postimg.cc/3wgDF5Bt/image.png', width=275, caption="") # 400잡으면 전체 400축소됨.
 
 
 #사이드바
@@ -39,16 +44,16 @@ PAGES = {
     "AI뮤직": pages.AI뮤직,
     "AI푸드": pages.AI푸드,
     "AI감정분석": pages.AI감정분석,
-    "AI여행": pages.AI여행,
+#    "AI여행": pages.AI여행,
     "달력": pages.달력,
     "제작진행부분": pages.제작진행부분,
 
 }
 
-st.sidebar.header("어디로 갈까요...")
+st.sidebar.header("감정을 채워주는 AI일기")
 #임시중지 add_selectbox = st.sidebar.selectbox("왼쪽 사이드바 Select Box", ("일기장", "AI가 분석한 당신의 감정", "감정을 채워줄 노래"))
 # 사이드바 분기
-selection = st.sidebar.radio("Go to", list(PAGES.keys()))
+selection = st.sidebar.radio("Page를 이동해 다양한 기능을 사용해 보세요!", list(PAGES.keys()))
 
 page = PAGES[selection]
 
@@ -88,24 +93,23 @@ def view_all_users():
 
 
 def main():
-    # 공통실행
-    st.title("간편 회원가입")
 
     # 선택실행
-    login = ["홈", "로그인", "회원가입"]
-    choice = st.sidebar.selectbox("Menu", login)
+    login = ["회원가입", "로그인", "My Home"]
+    choice = st.sidebar.selectbox("회원가입 화면은 페이지 하단에 생성됩니다.", login)
 
     ## home(작동확인)
-    if choice == "홈":
-        st.subheader("Home")
+    #if choice == "홈":
+
 
 
     ## Login
     # c.f. subheader9 미존재로 error
-    elif choice == "로그인":
+    #elif choice == "로그인":
+
+    if choice == "로그인":
         st.subheader("Login Section")
         username = st.sidebar.text_input("ID")
-
         password = st.sidebar.text_input("PW", type='password')
         if st.sidebar.button("Login"):
             create_usertable()
@@ -129,6 +133,7 @@ def main():
     ##Sign_up
     # =
     elif choice == "회원가입":
+        st.title("간편 회원가입")
         st.subheader("새로운 계정을 생성하세요. 영어, 숫자만 ID, PW사용 가능합니다.")
         new_user = st.text_input("ID")
         new_password = st.text_input("PW", type='password')
@@ -140,6 +145,8 @@ def main():
 
 
 ## run
+    ##Show image 이거 주석이고 문법 아님.
+
 main()
 
 
